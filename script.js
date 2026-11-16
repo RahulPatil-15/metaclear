@@ -17,3 +17,14 @@ fileInput.addEventListener("change", function() {
 
 });
 
+const downloadBtn = document.getElementById("downloadBtn");
+
+downloadBtn.addEventListener("click", function(){
+
+    const canvas = document.getElementById("canvas");
+    const link = document.createElement("a");
+    link.download = "clean-image.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+
+});
