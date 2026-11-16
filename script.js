@@ -3,6 +3,18 @@ const fileInput= document.getElementById("fileInput");
 
 fileInput.addEventListener("change", function() {
 
+    const file = fileInput.files[0];
+    exifr.parse(file).then(function (data) {
+        document.getElementById("metaOutput").textContent =
+        data ? JSON.stringify(data, null, 2) : "No metadata found.";
+    }).catch(function () {
+        document.getElementById("metaOutput").textContent =
+        "No readanle metadata in this file."
+
+    });
+    
+    
+    
     const img = new Image();
 
     img.src = URL.createObjectURL(fileInput.files[0]);
