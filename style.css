@@ -1,10 +1,36 @@
 canvas {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 16px 0;
 }
 
 body {
     font-family: sans-serif;
     padding: 16px;
-    
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+#metaOutput {
+    max-height: 200px;
+    overflow: auto;
+    background: #f4f4f4;
+    padding: 12px;
+    font-size: 13px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color :white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
 }
